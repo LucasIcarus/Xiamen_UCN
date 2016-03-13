@@ -85,17 +85,16 @@ ul {
   padding-top: 120px;
   padding-bottom: 20px; }
 
-.row.wrapper .col-md-4 h3 {
+.row.wrapper .col-md-12.slogan h3 {
   color: #f7b62b;
-  margin-top: 100px;
-  margin-bottom: 60px; }
-.row.wrapper .col-md-4 p {
-  font-size: 16px;
-  text-align: right; }
-.row.wrapper .col-md-4 .visible {
-  margin-left: 250px;
-  margin-top: 80px; }
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: 120px; }
 .row.wrapper a.btn-primary {
+  margin-top: 20px;
+  margin-right: 100px;
+  float: right;
   background-color: #f7b62b;
   border: 1px solid #f7b62b; }
 .row.wrapper .carousel-indicators {
@@ -134,7 +133,7 @@ ul {
     animation: bounce 1.3s cubic-bezier(0.3, 2.4, 0.85, 2.5) 0s infinite; }
 
 @-webkit-keyframes bounce {
-  from,to {
+  from, to {
     -webkit-transform: translateY(16px);
     -moz-transform: translateY(16px);
     -ms-transform: translateY(16px);
@@ -147,7 +146,7 @@ ul {
     -o-transform: translateY(8px);
     transform: translateY(8px); } }
 @-moz-keyframes bounce {
-  from,to {
+  from, to {
     -webkit-transform: translateY(16px);
     -moz-transform: translateY(16px);
     -ms-transform: translateY(16px);
@@ -160,7 +159,7 @@ ul {
     -o-transform: translateY(8px);
     transform: translateY(8px); } }
 @-ms-keyframes bounce {
-  from,to {
+  from, to {
     -webkit-transform: translateY(16px);
     -moz-transform: translateY(16px);
     -ms-transform: translateY(16px);
@@ -173,7 +172,7 @@ ul {
     -o-transform: translateY(8px);
     transform: translateY(8px); } }
 @-o-keyframes bounce {
-  from,to {
+  from, to {
     -webkit-transform: translateY(16px);
     -moz-transform: translateY(16px);
     -ms-transform: translateY(16px);
@@ -186,7 +185,7 @@ ul {
     -o-transform: translateY(8px);
     transform: translateY(8px); } }
 @keyframes bounce {
-  from,to {
+  from, to {
     -webkit-transform: translateY(16px);
     -moz-transform: translateY(16px);
     -ms-transform: translateY(16px);
@@ -365,7 +364,7 @@ ul {
     bottom: 20px; }
 
   .row.wrapper .carousel-inner {
-    height: 343px; }
+    height: 521px; }
 
   .info-content img {
     margin-top: 60px; } }

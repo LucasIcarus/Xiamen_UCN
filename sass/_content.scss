@@ -5,23 +5,18 @@
 }
 
 //first row
-.row.wrapper{
-  .col-md-4{
-    h3{
-      color: $logo-color;
-      margin-top: 100px;
-      margin-bottom: 60px;
-    }
-    p{
-      font-size: 16px;
-      text-align: right;
-    }
-    .visible{
-      margin-left: 250px;
-      margin-top: 80px;
-    }
+.row.wrapper {
+  .col-md-12.slogan h3 {
+    color: $logo-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 120px;
   }
-  a.btn-primary{
+  a.btn-primary {
+    margin-top: 20px;
+    margin-right: 100px;
+    float: right;
     background-color: $logo-color;
     border: 1px solid $logo-color;
   }
@@ -49,80 +44,80 @@
   }
 }
 
-.row.arrow{
+.row.arrow {
   padding-top: 50px;
-  a,a:hover,a:link,a:visited{
+  a, a:hover, a:link, a:visited {
     color: $logo-color;
   }
-  .bounce{
-    @include transform-origin(center,bottom);
-    @include ea-animation(bounce,1.3s,cubic-bezier(.3,2.4,.85,2.5));
+  .bounce {
+    @include transform-origin(center, bottom);
+    @include ea-animation(bounce, 1.3s, cubic-bezier(.3, 2.4, .85, 2.5));
   }
 }
 
 //bounce animation
-@include ea-keyframes(bounce){
-  from,to {
+@include ea-keyframes(bounce) {
+  from, to {
     @include ea-transform(translateY(16px));
   }
-  80%{
+  80% {
     @include ea-transform(translateY(8px));
   }
 }
 
 //second row
-.gray.padding-lg{
+.gray.padding-lg {
   background-color: #f7f7f7;
   @include vertical-center(100px);
-  .row.padding-md{
-    .label-default{
+  .row.padding-md {
+    .label-default {
       background-color: $logo-color;
     }
-    h3{
+    h3 {
       padding-left: 50px;
     }
-    .fa-ul{
+    .fa-ul {
       margin-top: 30px;
-      .list-group-item{
-        .fa{
+      .list-group-item {
+        .fa {
           color: $logo-color;
           top: 40%;
           //left: -3%;
         }
         background-color: #f7f7f7;
       }
-      img{
+      img {
         margin-top: 20px;
         margin-bottom: 5px;
         width: 80%;
       }
     }
-   .col-md-7{
-     .list-group{
-       margin-top: 30px;
-       .list-group-item{
-         background-color: #f7f7f7;
-       }
-     }
-   }
+    .col-md-7 {
+      .list-group {
+        margin-top: 30px;
+        .list-group-item {
+          background-color: #f7f7f7;
+        }
+      }
+    }
   }
 }
 
 //info
-.info-content{
+.info-content {
   @include vertical-center(80px);
-  h3{
+  h3 {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  p{
+  p {
     font-size: 16px;
     margin-left: 30px;
   }
-  p.last{
+  p.last {
     font-size: 20px;
   }
-  .label-default{
+  .label-default {
     background-color: $logo-color;
     border: 1px solid $logo-color;
   }
@@ -130,112 +125,112 @@
 
 //exhibition
 
-.exhibition-content{
+.exhibition-content {
   @include vertical-center(80px);
-  .row.exhibition{
+  .row.exhibition {
     padding-right: 20px;
     padding-left: 20px;
   }
-  .col-md-6{
+  .col-md-6 {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 40px;
   }
-  img{
+  img {
     width: 95%;
     margin-bottom: 10px;
   }
-  i.fa{
+  i.fa {
     color: $logo-color;
-    top:30%;
+    top: 30%;
   }
-  hr{
+  hr {
     margin-top: 5px;
   }
-  a.btn{
+  a.btn {
     margin-left: 20px;
   }
-  .fa-4x{
+  .fa-4x {
     vertical-align: bottom;
   }
-  p{
+  p {
     margin-top: 10px;
   }
-  .col-md-2{
-    a:hover{
+  .col-md-2 {
+    a:hover {
       color: $logo-color;
       text-decoration: none;
     }
-    p:hover{
+    p:hover {
       color: $logo-color;
     }
   }
 }
 
 //market
-.market-content{
+.market-content {
   @include vertical-center(80px);
-  i.fa{
-    color:$logo-color;
+  i.fa {
+    color: $logo-color;
     margin-bottom: 30px;
   }
-  a.btn{
+  a.btn {
     background-color: $logo-color;
     border: 1px solid $logo-color;
     margin-bottom: 30px;
     padding-left: 40px;
     padding-right: 40px;
   }
-  .list-group{
+  .list-group {
     margin-left: 20px;
     margin-right: 20px;
   }
-  h4{
+  h4 {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  p{
+  p {
     padding-bottom: 10px;
   }
-  a:hover{
+  a:hover {
     background-color: $logo-color;
     color: #fff;
-    h4{
+    h4 {
       color: #fff;
     }
   }
-  p:hover{
+  p:hover {
     color: #fff;
   }
 }
 
-.market-article{
+.market-article {
   @include vertical-center(80px);
-  .row{
+  .row {
     padding-left: 30px;
     padding-right: 30px;
   }
-  i.fa{
+  i.fa {
     color: $logo-color;
   }
-  h3{
+  h3 {
     display: inline-block;
     margin-left: 20px;
     margin-bottom: 40px;
   }
-  p{
+  p {
     font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
     text-indent: 2em;
   }
-  p.lead{
+  p.lead {
     color: $logo-color;
   }
-  p.link{
+  p.link {
     text-align: right;
   }
-  a:hover{
+  a:hover {
     color: $logo-color;
     text-decoration: none;
   }
@@ -243,22 +238,22 @@
 
 //contact
 
-.contact-content{
+.contact-content {
   @include vertical-center(80px);
-  .label-default{
+  .label-default {
     background-color: $logo-color;
     border: 1px solid $logo-color;
   }
-  h3{
+  h3 {
     margin-bottom: 20px;
     margin-top: 10px;
     display: inline-block;
   }
-  i.fa{
+  i.fa {
     vertical-align: middle;
     color: $logo-color;
   }
-  a:hover{
+  a:hover {
     color: $logo-color;
     text-decoration: none;
   }
