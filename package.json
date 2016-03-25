@@ -1,0 +1,20 @@
+{
+  "name": "Xiamen_UCN",
+  "version": "0.1.0",
+  "author": "Fancy",
+  "title": "UCN_Exhibition",
+  "homepage": "https://lucasicarus.github.io/Xiamen_UCN/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LucasIcarus/Xiamen_UCN"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "imagemin-pngquant": "^4.2.2"
+  }
+}

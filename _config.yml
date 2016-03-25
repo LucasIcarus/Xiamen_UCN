@@ -1,0 +1,14 @@
+# Site settings
+title: Xiamen_UCN
+SEOTitle: Xiamen_UCN | 厦门联合誉华会展公司
+email: info@ucnexpo.com
+logo-img: ./img/logo.png
+description: "厦门联合誉华展览有限公司, 一家专注海外展会咨询、定制, 国际市场考察、商务旅行定制的专业国际展会公司. 响应国家号召,
+帮助中国中小企业开拓国际市场, 力争将中小企业品牌推广到世界各地, 寻找最匹配企业的市场, 为企业谋求一席之地. 通过自身发展和努力,
+五年内助力千家中国企业拓展海外市场. 链接世界, 用心服务, 誉展全球! "
+keyword: "厦门, 联合誉华, 会展公司, 海外展会, 展会咨询, 展会定制, 国际市场考察, 商务旅行定制, 帮助中小企业, 品牌推广, 匹配市场, 拓展海外市场, 展会服务"
+baseurl: ""
+url: "http://www.ucnexpo.com"
+
+# Build settings
+exclude: ["gulpfile.js","package.json","node_modules","README.md","LICENSE"]

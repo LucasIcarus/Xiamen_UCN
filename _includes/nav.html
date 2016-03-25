@@ -1,0 +1,57 @@
+
+
+<nav class="navbar navbar-default custom-navbar site-header if-need-fix">
+    <div class="container-my">
+        <div class="navbar-header clearfix">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand" data-baidu-track-event="{'type':'导航栏','event':'logo','label':'xxxx'}">
+                <img src="./img/logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <span class="slogan media-middle">
+                <h2><b>UCN</b></h2><h5>Exhibition</h5>
+                <br>
+                <h4 class="text-center"><b>联合誉华会展</b></h4>
+            </span>
+            <ul class="nav navbar-nav navbar-right custom-navbar-ul">
+                {% if page.nav == 'index' %}
+                <li><a class="active" href="#">首页</a></li>
+                {% else %}
+                <li><a href="./index.html">首页</a></li>
+                {% endif %}
+                {% if page.nav == 'info' %}
+                <li><a class="active" href="#">走进誉华</a></li>
+                {% else %}
+                <li><a href="./info.html">走进誉华</a></li>
+                {% endif %}
+                {% if page.nav == 'exhibition' %}
+                <li><a class="active" href="#">展会信息</a></li>
+                {% else %}
+                <li><a href="./exhibition.html">展会信息</a></li>
+                {% endif %}
+                {% if page.nav == 'market' %}
+                <li><a class="active" href="#">市场资讯</a></li>
+                {% else %}
+                <li><a href="./market.html">市场资讯</a></li>
+                {% endif %}
+                {% if page.nav == 'audio' %}
+                <li><a class="active" href="#">展会风采</a></li>
+                {% else %}
+                <li><a href="./audio.html">展会风采</a></li>
+                {% endif %}
+                {% if page.nav == 'contact' %}
+                <li><a class="active" href="#">联系我们</a></li>
+                {% else %}
+                <li><a href="./contact.html">联系我们</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
