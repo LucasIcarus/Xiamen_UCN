@@ -3,7 +3,7 @@ var h = $(window).width();
 
 
 $(document).ready(function () {
-	//$("#index-carousel").carousel();
+    //$("#index-carousel").carousel();
 });
 
 

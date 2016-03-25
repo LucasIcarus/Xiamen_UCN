@@ -1,3 +1,7 @@
+_site
+.sass-cache
+.jekyll-metadata
+
 #JetBrains
 .idea/*
 .idea*
@@ -7,9 +11,8 @@
 #npm
 node_modules*
 
-
-#grunt
-Gruntfile.js
+#SASS
+.sass-cache*
 
 
 # Created by https://www.gitignore.io/api/ode,webstorm,windows
