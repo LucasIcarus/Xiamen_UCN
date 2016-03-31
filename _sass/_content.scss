@@ -1,264 +1,332 @@
 //top padding
 .index_content {
-  padding-top: 120px;
-  padding-bottom: 20px;
+    padding-top: 160px;
+    padding-bottom: 20px;
 }
 
 //first row
 .row.wrapper {
-  .col-md-12.slogan h3 {
-    color: $logo-color;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-left: 120px;
-  }
-  a.btn-primary {
-    margin-top: 20px;
-    margin-right: 100px;
-    float: right;
-    background-color: $logo-color;
-    border: 1px solid $logo-color;
-  }
-  .carousel-indicators {
-    display: block;
-    position: static;
-    top: auto;
-    left: auto;
-    width: 100%;
-    margin-left: 0;
-    margin-top: 30px;
-    z-index: 15;
-    padding-left: 0;
-    list-style: none;
-    li {
-      margin: 0 5px;
-      width: 18px;
-      height: 18px;
-      border: 1px solid #c6c6c6;
+    .col-md-12.slogan h3 {
+        color: $logo-color;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        font-size: 35px;
     }
-    li.active {
-      border: 1px solid $logo-color;
-      background-color: $logo-color;
+    i {
+        float: right;
+        color: $logo-color;
+        margin-right: 10px;
+        margin-top: 5px;
     }
-  }
+    a.btn-primary {
+        //margin-top: 5px;
+        margin-right: 100px;
+        font-size: 20px;
+        float: right;
+        background-color: $logo-color;
+        border: 1px solid $logo-color;
+    }
+    .carousel-indicators {
+        display: block;
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+        z-index: 15;
+        padding-left: 0;
+        list-style: none;
+        li {
+            margin: 0 5px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #c6c6c6;
+        }
+        li.active {
+            border: 1px solid $logo-color;
+            background-color: $logo-color;
+        }
+    }
+    .beat{
+        @include transform-origin(center, bottom);
+        @include ea-animation(beat, 2.3s, cubic-bezier(0, 0, 1.0, 1.0));
+    }
 }
 
 .row.arrow {
-  padding-top: 50px;
-  a, a:hover, a:link, a:visited {
-    color: $logo-color;
-  }
-  .bounce {
-    @include transform-origin(center, bottom);
-    @include ea-animation(bounce, 1.3s, cubic-bezier(.3, 2.4, .85, 2.5));
-  }
+    a, a:hover, a:link, a:visited {
+        color: $logo-color;
+    }
+    .bounce {
+        @include transform-origin(center, bottom);
+        @include ea-animation(bounce, 1.3s, cubic-bezier(.3, 2.4, .85, 2.5));
+    }
 }
 
 //bounce animation
 @include ea-keyframes(bounce) {
-  from, to {
-    @include ea-transform(translateY(16px));
-  }
-  80% {
-    @include ea-transform(translateY(8px));
-  }
+    from, to {
+        @include ea-transform(translateY(16px));
+    }
+    80% {
+        @include ea-transform(translateY(8px));
+    }
+}
+
+//beat animation
+@include  ea-keyframes(beat) {
+    form, to {
+        opacity: 1;
+        @include ea-transform(scale(1.0));
+    }
+    50% {
+        opacity: 0.3;
+        @include ea-transform(scale(1.1));
+    }
 }
 
 //second row
 .gray.padding-lg {
-  background-color: #f7f7f7;
-  @include vertical-center(100px);
-  .row.padding-md {
-    .label-default {
-      background-color: $logo-color;
+    background-color: #f7f7f7;
+    @include vertical-center(100px);
+    .row.padding-md {
+        i{
+            color: $logo-color;
+        }
+        .label-default {
+            font-size: 25px;
+            background-color: $logo-color;
+        }
+        .world-mp {
+            padding-top: 50px;
+            img {
+                width: 80%;
+            }
+        }
     }
-    div.col-md-2 {
-      padding-right: 5px;
-      padding-left: 5px;
-      margin-top: 30px;
-      img {
-        margin-top: 20px;
-        margin-bottom: 5px;
-        width: 98%;
-      }
+}
+
+.hot-zone {
+    .slide{
+        margin-top: 30px;
     }
-    .world-mp {
-      padding-top: 50px;
-      img {
-        width: 80%;
-      }
+    [class *= "span"]:first-child{
+        margin-left: 0.5%;
     }
-  }
+    [class *= "span"]:last-child{
+        margin-right: 0.5%;
+    }
+    [class *= "span"]{
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        margin-left: 2.12766%;
+        min-height: 30px;
+        width: 100%;
+    }
+    .span3{
+        width: 23.1543%;
+    }
+    .carousel-control{
+        border: none;
+        padding: 4px 10px 0px;
+        height: 30px;
+        width: 15px;
+    }
+    #sever-prev{
+        background: none;
+        left: -50px;
+        top: 50%;
+    }
+    #sever-next{
+        background: none;
+        right: -30px;
+        top: 50%;
+    }
+    .caption {
+        h3{
+            text-align: center;
+            color: $logo-color;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
 }
 
 div[class$='-content'] {
-  @include vertical-center(80px);
-  .label-default {
-    background-color: $logo-color;
-    border: 1px solid $logo-color;
-  }
-  i.fa {
-    color: $logo-color;
-  }
-  a:hover {
-    color: $logo-color;
-    text-decoration: none;
-  }
+    @include vertical-center(80px);
+    .label-default {
+        background-color: $logo-color;
+        border: 1px solid $logo-color;
+    }
+    i.fa {
+        color: $logo-color;
+    }
+    a:hover {
+        color: $logo-color;
+        text-decoration: none;
+    }
 }
+
+
 
 //info
 .info-content {
-  h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  p {
-    font-size: 16px;
-    margin-left: 30px;
-  }
-  p.last {
-    font-size: 20px;
-  }
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 16px;
+        margin-left: 30px;
+    }
+    p.last {
+        font-size: 20px;
+    }
 }
 
 //exhibition
 
 .exhibition-content {
-  @include vertical-center(80px);
-  .row.exhibition {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .col-md-6 {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 40px;
-  }
-  img {
-    width: 95%;
-    margin-bottom: 10px;
-  }
-  i.fa {
-    top: 30%;
-  }
-  hr {
-    margin-top: 5px;
-  }
-  a.btn {
-    margin-left: 20px;
-  }
-  .fa-4x {
-    vertical-align: bottom;
-  }
-  p {
-    margin-top: 10px;
-  }
-  .col-md-2 {
-    p:hover {
-      color: $logo-color;
+    @include vertical-center(80px);
+    .row.exhibition {
+        padding-right: 20px;
+        padding-left: 20px;
     }
-  }
+    .col-md-6 {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+    }
+    img {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+    i.fa {
+        top: 30%;
+    }
+    hr {
+        margin-top: 5px;
+    }
+    a.btn {
+        margin-left: 20px;
+    }
+    .fa-4x {
+        vertical-align: bottom;
+    }
+    p {
+        margin-top: 10px;
+    }
+    .col-md-2 {
+        p:hover {
+            color: $logo-color;
+        }
+    }
 }
 
 //market
 .market-content {
-  i.fa {
-    margin-bottom: 30px;
-  }
-  a.btn {
-    background-color: $logo-color;
-    border: 1px solid $logo-color;
-    margin-bottom: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .list-group {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  h4 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  p {
-    padding-bottom: 10px;
-  }
-  a:hover {
-    background-color: $logo-color;
-    color: #fff;
-    p {
-      color: #fff;
+    i.fa {
+        margin-bottom: 30px;
+    }
+    a.btn {
+        background-color: $logo-color;
+        border: 1px solid $logo-color;
+        margin-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .list-group {
+        margin-left: 20px;
+        margin-right: 20px;
     }
     h4 {
-      color: #fff;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
-  }
-  p:hover {
-    color: #fff;
-  }
+    p {
+        padding-bottom: 10px;
+    }
+    a:hover {
+        background-color: $logo-color;
+        color: #fff;
+        p {
+            color: #fff;
+        }
+        h4 {
+            color: #fff;
+        }
+    }
+    p:hover {
+        color: #fff;
+    }
 }
 
 .market-article {
-  @include vertical-center(80px);
-  .row {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  h3 {
-    display: inline-block;
-    margin-left: 20px;
-    margin-bottom: 40px;
-  }
-  p {
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-indent: 2em;
-  }
-  p.lead {
-    color: $logo-color;
-  }
-  p.link {
-    text-align: right;
-  }
+    @include vertical-center(80px);
+    .row {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    h3 {
+        display: inline-block;
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-indent: 2em;
+    }
+    p.lead {
+        color: $logo-color;
+    }
+    p.link {
+        text-align: right;
+    }
 }
 
 //contact
 
 .contact-content {
-  @include vertical-center(80px);
-  .label-default {
-    background-color: $logo-color;
-    border: 1px solid $logo-color;
-  }
-  h3 {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    display: inline-block;
-  }
-  i.fa {
-    vertical-align: middle;
-  }
+    @include vertical-center(80px);
+    .label-default {
+        background-color: $logo-color;
+        border: 1px solid $logo-color;
+    }
+    h3 {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    i.fa {
+        vertical-align: middle;
+    }
 }
 
-.audio-content{
-  padding-top: 50px!important;
-  a.btn{
-    background-color: $logo-color;
-    border: 1px solid $logo-color;
-    margin-left: 50px;
-  }
-  .col-md-12{
-    padding-top: 50px;
-  }
-  hr{
-    height: 5px;
-    border: none;
-    border-top: 5px solid $logo-color;
-  }
-  .e_pic img{
-    width: 100%;
-    margin-bottom: 30px;
-  }
+.audio-content {
+    padding-top: 50px !important;
+    a.btn {
+        background-color: $logo-color;
+        border: 1px solid $logo-color;
+        margin-left: 50px;
+    }
+    .col-md-12 {
+        padding-top: 50px;
+    }
+    hr {
+        height: 5px;
+        border: none;
+        border-top: 5px solid $logo-color;
+    }
+    .e_pic img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }

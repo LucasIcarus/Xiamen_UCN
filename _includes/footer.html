@@ -52,4 +52,26 @@
 <script>window.jQuery || document.write('<script src="./js/jquery-1.11.3.min.js"><\/script>')</script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<!--carousel-->
+{% if page.nav == 'index' %}
+<script src="http://cdn.bootcss.com/hammer.js/2.0.6/hammer.min.js"></script>
+<script type="text/javascript" src="./js/jquery.hammer.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#hotCarousel').hammer().on('swipeleft',function () {
+            $(this).carousel('next');
+        });
+        $('#hotCarousel').hammer().on('swiperight', function(){
+            $(this).carousel('prev');
+        });
+        $('#index-carousel').hammer().on('swipeleft',function () {
+            $(this).carousel('next');
+        });
+        $('#index-carousel').hammer().on('swiperight', function(){
+            $(this).carousel('prev');
+        });
+    });
+</script>>
+{% endif %}
+
 

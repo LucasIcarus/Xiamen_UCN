@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     pngquant = require('imagemin-pngquant');
-    
+
 
 gulp.task('css', function () {
     return gulp.src('./css/main.css')
