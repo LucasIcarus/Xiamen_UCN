@@ -1,9 +1,10 @@
 {
   "name": "Xiamen_UCN",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Fancy",
   "title": "UCN_Exhibition",
   "homepage": "https://lucasicarus.github.io/Xiamen_UCN/",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/LucasIcarus/Xiamen_UCN"

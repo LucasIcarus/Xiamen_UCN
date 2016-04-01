@@ -350,10 +350,13 @@ div[class$='-content'] {
     text-decoration: none; }
 
 .info-content h3 {
+  font-size: 35px;
   margin-top: 30px;
   margin-bottom: 30px; }
+  .info-content h3 span .fa {
+    color: #ffffff; }
 .info-content p {
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 30px; }
 .info-content p.last {
   font-size: 20px; }
@@ -371,12 +374,18 @@ div[class$='-content'] {
   .exhibition-content img {
     width: 95%;
     margin-bottom: 10px; }
-  .exhibition-content i.fa {
-    top: 30%; }
   .exhibition-content hr {
-    margin-top: 5px; }
+    margin-top: 15px;
+    height: 3px;
+    border: none;
+    border-top: 3px solid #bbbbbb; }
   .exhibition-content a.btn {
+    background-color: #f7b62b;
+    border: 1px solid #f7b62b;
+    font-size: 30px;
     margin-left: 20px; }
+    .exhibition-content a.btn .fa {
+      color: #ffffff; }
   .exhibition-content .fa-4x {
     vertical-align: bottom; }
   .exhibition-content p {
@@ -384,14 +393,13 @@ div[class$='-content'] {
   .exhibition-content .col-md-2 p:hover {
     color: #f7b62b; }
 
-.market-content i.fa {
-  margin-bottom: 30px; }
 .market-content a.btn {
   background-color: #f7b62b;
   border: 1px solid #f7b62b;
   margin-bottom: 30px;
   padding-left: 40px;
-  padding-right: 40px; }
+  padding-right: 40px;
+  font-size: 25px; }
 .market-content .list-group {
   margin-left: 20px;
   margin-right: 20px; }
@@ -436,10 +444,13 @@ div[class$='-content'] {
   .contact-content .label-default {
     background-color: #f7b62b;
     border: 1px solid #f7b62b; }
+    .contact-content .label-default .fa {
+      color: #ffffff; }
   .contact-content h3 {
     margin-bottom: 20px;
     margin-top: 10px;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 30px; }
   .contact-content i.fa {
     vertical-align: middle; }
 
@@ -448,7 +459,10 @@ div[class$='-content'] {
   .audio-content a.btn {
     background-color: #f7b62b;
     border: 1px solid #f7b62b;
-    margin-left: 50px; }
+    margin-left: 10px;
+    font-size: 25px; }
+    .audio-content a.btn .fa {
+      color: #ffffff; }
   .audio-content .col-md-12 {
     padding-top: 50px; }
   .audio-content hr {

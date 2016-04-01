@@ -178,11 +178,15 @@ div[class$='-content'] {
 //info
 .info-content {
     h3 {
+        font-size: 35px;
         margin-top: 30px;
         margin-bottom: 30px;
+        span .fa{
+            color: #ffffff;
+        }
     }
     p {
-        font-size: 16px;
+        font-size: 18px;
         margin-left: 30px;
     }
     p.last {
@@ -207,14 +211,20 @@ div[class$='-content'] {
         width: 95%;
         margin-bottom: 10px;
     }
-    i.fa {
-        top: 30%;
-    }
     hr {
-        margin-top: 5px;
+        margin-top: 15px;
+        height: 3px;
+        border: none;
+        border-top: 3px solid #bbbbbb;
     }
     a.btn {
+        background-color: $logo-color;
+        border: 1px solid $logo-color;
+        font-size: 30px;
         margin-left: 20px;
+        .fa {
+            color: #ffffff;
+        }
     }
     .fa-4x {
         vertical-align: bottom;
@@ -231,15 +241,13 @@ div[class$='-content'] {
 
 //market
 .market-content {
-    i.fa {
-        margin-bottom: 30px;
-    }
     a.btn {
         background-color: $logo-color;
         border: 1px solid $logo-color;
         margin-bottom: 30px;
         padding-left: 40px;
         padding-right: 40px;
+        font-size: 25px;
     }
     .list-group {
         margin-left: 20px;
@@ -299,23 +307,33 @@ div[class$='-content'] {
     .label-default {
         background-color: $logo-color;
         border: 1px solid $logo-color;
+        .fa{
+            color: #ffffff;
+        }
     }
     h3 {
         margin-bottom: 20px;
         margin-top: 10px;
         display: inline-block;
+        font-size: 30px;
     }
     i.fa {
         vertical-align: middle;
     }
 }
 
+//audio
+
 .audio-content {
     padding-top: 50px !important;
     a.btn {
         background-color: $logo-color;
         border: 1px solid $logo-color;
-        margin-left: 50px;
+        margin-left: 10px;
+        font-size: 25px;
+        .fa{
+            color: #ffffff;
+        }
     }
     .col-md-12 {
         padding-top: 50px;
