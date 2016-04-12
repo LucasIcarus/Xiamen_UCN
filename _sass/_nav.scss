@@ -1,3 +1,7 @@
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a.active {
+    color: $logo-color;
+}
+
 .custom-navbar {
     z-index: 9;
     margin-bottom: 0;
@@ -19,7 +23,6 @@
             border: 0;
             width: 40px;
             height: 40px;
-
         }
     }
     span {
@@ -35,10 +38,7 @@
     li {
         @include horizontal-center(auto, 15px);
         a {
-            font-size: 18px;
-        }
-        a.active, a:hover {
-            color: $logo-color !important;
+            font-size: 16px;
         }
     }
 }

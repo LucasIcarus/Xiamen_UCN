@@ -171,12 +171,6 @@ div[class$='-content'] {
         color: $logo-color;
         text-decoration: none;
     }
-}
-
-
-
-//info
-.info-content {
     h3 {
         font-size: 35px;
         margin-top: 30px;
@@ -185,6 +179,17 @@ div[class$='-content'] {
             color: #ffffff;
         }
     }
+    hr {
+        height: 5px;
+        border: none;
+        border-top: 5px solid $logo-color;
+    }
+}
+
+
+
+//info
+.info-content {
     p {
         font-size: 18px;
         margin-left: 30px;
@@ -213,21 +218,6 @@ div[class$='-content'] {
     }
     hr {
         margin-top: 15px;
-        height: 3px;
-        border: none;
-        border-top: 3px solid #bbbbbb;
-    }
-    a.btn {
-        background-color: $logo-color;
-        border: 1px solid $logo-color;
-        font-size: 30px;
-        margin-left: 20px;
-        .fa {
-            color: #ffffff;
-        }
-    }
-    .fa-4x {
-        vertical-align: bottom;
     }
     p {
         margin-top: 10px;

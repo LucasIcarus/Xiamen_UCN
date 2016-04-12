@@ -76,36 +76,66 @@
     }
 }
 
-@include max-screen(1000px) {
+@include max-screen(1100px) {
     .custom-navbar-ul li {
         @include horizontal-center(auto, 8px);
     }
 }
 
-@include max-screen(910px) {
+@include max-screen(1000px) {
     .custom-navbar-ul li {
         @include horizontal-center(auto, 4px);
     }
 }
 
-@include max-screen(860px) {
+@include max-screen(940px) {
     .custom-navbar-ul li {
         @include horizontal-center(auto, 0px);
     }
 }
 
-@include max-screen(815px) {
+@include max-screen(880px) {
     .custom-navbar-ul li a {
-        font-size: 16px;
+        font-size: 14px;
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+@include max-screen(835px){
     .hot-zone{
-        .span3:first-child{
-            margin-left: 2.12766%;
+        .span3:first-child, .span3:nth-child(3){
+            margin-left: 5.52766%;
         }
         .span3 {
             width: 43%;
+        }
+    }
+}
+
+@include min-screen(768px){
+    .custom-navbar-ul {
+        .dropdown {
+            a.dropdown-toggle{
+                color: #777;
+            }
+            a.dropdown-toggle:hover, a.dropdown-toggle:link, a.dropdown-toggle:visited {
+                color: #777;
+            }
+            .dropdown-menu {
+                top: 50px;
+                left: 15px;
+                @include vertical-center(12px);
+                li{
+                    padding-top: 8px;
+                }
+                a, a:link, a:visited {
+                    color: #777;
+                }
+                a:hover {
+                    color: $logo-color;
+                }
+            }
         }
     }
 }
