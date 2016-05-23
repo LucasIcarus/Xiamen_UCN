@@ -30,11 +30,6 @@
     div.world-mp {
         height: 407px;
     }
-    .info-content {
-        img {
-            margin-top: 60px;
-        }
-    }
 }
 
 @include min-screen(992px) {
@@ -135,6 +130,19 @@
                 a:hover {
                     color: $logo-color;
                 }
+            }
+        }
+    }
+}
+
+@include min-screen(876px) {
+    .exhibition-content {
+        .table {
+            p {
+                position: absolute;
+                margin: auto;
+                top:0; right: 0; bottom: 0; left:0;
+                line-height: 98px;
             }
         }
     }

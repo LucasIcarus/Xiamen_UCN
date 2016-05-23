@@ -15,6 +15,7 @@
         padding: 5px;
         .logo {
             max-width: 102px;
+            cursor: default;
         }
     }
     a {
@@ -26,6 +27,7 @@
         }
     }
     span {
+        cursor: default;
         display: inline-block;
         h2, h4, h5 {
             display: inline-block;

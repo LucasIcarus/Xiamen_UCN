@@ -1,7 +1,9 @@
 //top padding
 .index_content {
+    position: relative;
     padding-top: 160px;
     padding-bottom: 20px;
+    height: 100%;
 }
 
 //first row
@@ -67,12 +69,12 @@
 
 //bounce animation
 @include ea-keyframes(bounce) {
-    from, to {
-        @include ea-transform(translateY(16px));
-    }
-    80% {
-        @include ea-transform(translateY(8px));
-    }
+     from, to {
+         @include ea-transform(translateY(16px));
+     }
+     80% {
+         @include ea-transform(translateY(8px));
+     }
 }
 
 //beat animation
@@ -90,22 +92,34 @@
 //second row
 .gray.padding-lg {
     background-color: #f7f7f7;
+
+    background-image: url("../img/page-background.png");
+
     @include vertical-center(100px);
+
+    // padding hack
+    margin-bottom: 1px;
+
     .row.padding-md {
         i{
             color: $logo-color;
         }
         .label-default {
+            cursor: default;
             font-size: 25px;
             background-color: $logo-color;
         }
-        .world-mp {
+        .world-map {
             padding-top: 50px;
             img {
-                width: 80%;
+                width: 100%;
             }
         }
+        .jumbotron{
+            background-color: #fff;
+        }
     }
+
 }
 
 .hot-zone {
@@ -159,8 +173,10 @@
 }
 
 div[class$='-content'] {
-    @include vertical-center(80px);
+
+    padding-top: 80px;
     .label-default {
+        cursor: default;
         background-color: $logo-color;
         border: 1px solid $logo-color;
     }
@@ -172,9 +188,8 @@ div[class$='-content'] {
         text-decoration: none;
     }
     h3 {
+        margin-top: 15px;
         font-size: 35px;
-        margin-top: 30px;
-        margin-bottom: 30px;
         span .fa{
             color: #ffffff;
         }
@@ -184,6 +199,23 @@ div[class$='-content'] {
         border: none;
         border-top: 5px solid $logo-color;
     }
+
+    .service-wrapper-row {
+        padding: 10px 0;
+        .service-image {
+            padding-top: 15px;
+            text-align: center;
+            img{
+                max-width: 80%;
+                vertical-align: top;
+                border-radius: 5px;
+                background-clip: border-box;
+                box-shadow: 0 0 8px #999;
+                bottom: 0;
+                border: 7px solid #fff;
+            }
+        }
+    }
 }
 
 
@@ -192,7 +224,7 @@ div[class$='-content'] {
 .info-content {
     p {
         font-size: 18px;
-        margin-left: 30px;
+        margin-top: 30px;
     }
     p.last {
         font-size: 20px;
@@ -202,66 +234,85 @@ div[class$='-content'] {
 //exhibition
 
 .exhibition-content {
-    @include vertical-center(80px);
-    .row.exhibition {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .col-md-6 {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 40px;
-    }
-    img {
-        width: 95%;
-        margin-bottom: 10px;
-    }
-    hr {
-        margin-top: 15px;
+    .row:first-child, .col-sm-6 {
+        h3{
+            padding-bottom: 20px;
+            border-bottom: 2px solid #53555c;
+        }
     }
     p {
         margin-top: 10px;
+        font-size: 18px;
     }
-    .col-md-2 {
-        p:hover {
-            color: $logo-color;
+    .table td{
+        display: table;
+        margin-bottom: 10px;
+        >div{
+            display: table-cell;
+            height: 100%;
+            min-height: 100%;
+            float: none;
         }
     }
 }
 
 //market
 .market-content {
-    a.btn {
-        background-color: $logo-color;
-        border: 1px solid $logo-color;
-        margin-bottom: 30px;
-        padding-left: 40px;
-        padding-right: 40px;
-        font-size: 25px;
-    }
-    .list-group {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    h4 {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    p {
-        padding-bottom: 10px;
-    }
-    a:hover {
-        background-color: $logo-color;
-        color: #fff;
-        p {
-            color: #fff;
-        }
-        h4 {
-            color: #fff;
+    .row:first-child {
+        h3{
+            padding-bottom: 20px;
+            border-bottom: 2px solid #53555c;
         }
     }
-    p:hover {
-        color: #fff;
+
+    .article-row .post {
+        background-color: #fff;
+        position: relative;
+        margin: 20px 0;
+        border: 7px solid #fff;
+        border-radius: 5px;
+        background-clip: padding-box;
+        box-shadow: inset 0 1px #fff, 0 0 8px #c8cfe6;
+        .post-info {
+            background: rgba(0, 0, 0, 0.6);
+            color: #FFF;
+            line-height: 1.2;
+            position: absolute;
+            padding: 5px;
+            left: 10px;
+            top: 10px;
+            background-clip: padding-box;
+            border-radius: 5px;
+        }
+        .post-comments-count {
+            i {
+                color: #fff;
+            }
+            text-align: center;
+            padding-top: 5px;
+        }
+        .post-image {
+            width: 100%;
+        }
+        .post-title h3{
+            font-size: 1.5em;
+            border-bottom: 1px dotted #828282;
+            margin: 0 20px;
+            padding-top: 10px;
+            font-weight: 700;
+        }
+        .post-summary {
+            margin: 10px 20px;
+            p {
+                color: #828282;
+                font-size: 0.9em;
+                text-align: justify;
+            }
+        }
+        .post-more {
+            text-align: right;
+            padding: 0 20px 20px 0;
+        }
     }
 }
 
@@ -315,26 +366,20 @@ div[class$='-content'] {
 //audio
 
 .audio-content {
-    padding-top: 50px !important;
-    a.btn {
-        background-color: $logo-color;
-        border: 1px solid $logo-color;
-        margin-left: 10px;
-        font-size: 25px;
-        .fa{
-            color: #ffffff;
+    .col-md-12 {
+        h3{
+            padding-bottom: 20px;
+            border-bottom: 2px solid #53555c;
         }
     }
-    .col-md-12 {
-        padding-top: 50px;
-    }
-    hr {
-        height: 5px;
-        border: none;
-        border-top: 5px solid $logo-color;
-    }
-    .e_pic img {
-        width: 100%;
-        margin-bottom: 30px;
+    .service-wrapper-row {
+        h4 {
+            font-weight: 700;
+            margin:20px  30px;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 30px;
+        }
     }
 }

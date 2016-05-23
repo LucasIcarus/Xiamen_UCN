@@ -2,7 +2,7 @@
 @import "ea_animation";
 
 //set the variable
-$font-family: "微软雅黑", Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", SimSun, "宋体", Heiti, "黑体", sans-serif;
+$font-family:  Microsoft YaHei, Helvetica, Tahoma, Arial, STXihei, SimSun, Heiti, sans-serif;
 $border-color: #e7e7e7;
 $logo-color: #f7b62b;
 $backgroud-color: #fff;
@@ -85,6 +85,31 @@ a {
   :hover{
     color: #a94442;
   }
+}
+
+.btn {
+  border: 1px solid #4f8db3;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease;
+  text-align: center;
+  background: none repeat scroll 0 0 #4f8db3;
+  text-shadow: none;
+  box-shadow: none;
+  color: #FFF;
+  white-space: nowrap;
 }
 
 h1, h2, h3, h4, h5, h6 {
