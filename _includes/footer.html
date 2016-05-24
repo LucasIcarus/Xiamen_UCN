@@ -76,3 +76,60 @@
 {% endif %}
 
 
+<!--baidu-map-->
+<!--index-->
+{% if page.nav == 'index' %}
+
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("map", {minZoom: 1, maxZoom: 8}); // 创建Map实例,设置地图允许的最小/大级别
+    map.centerAndZoom(new BMap.Point(0, 0), 2);
+    map.enableScrollWheelZoom(true);
+
+    // curve between city dot
+    var XiamenPosition = new BMap.Point(118.1, 24.4),
+            BeijingPosition = new BMap.Point(116.4, 39.9),
+            ShanghaiPosition = new BMap.Point(121.3, 31.1),
+            TaipeiPosition = new BMap.Point(121.5, 25.1),
+            HongkongPosition = new BMap.Point(113.9, 22.9),
+            MoscoPosition = new BMap.Point(37.4, 55.5),
+            BombayPosition = new BMap.Point(72.5, 18.6),
+            RioPosition = new BMap.Point(-43.2, -22.5),
+            NewyorkPosition = new BMap.Point(-74.0, 40.43),
+            LongdonPosition = new BMap.Point(0.1, 51.3),
+            MelbournePosition = new BMap.Point(144.6, -37.5);
+
+    var points = [XiamenPosition, BeijingPosition, ShanghaiPosition, TaipeiPosition, HongkongPosition, MoscoPosition,
+            BombayPosition, RioPosition,  LongdonPosition, MelbournePosition];
+
+    var curve = [];
+
+    for (var i = 0, len = points.length; i < len - 1; i++) {
+        curve[i] = new BMapLib.CurveLine([points[0], points[i + 1]],
+                {strokeColor: "#f7b62b", strokeWeight: 3, strokeOpacity: 0.5});
+        map.addOverlay(curve[i]);
+    }
+
+</script>
+
+{% endif %}
+
+<!--contact-->
+
+{% if page.nav == 'contact' %}
+
+<script>
+    var map = new BMap.Map("map", {minZoom: 12, maxZoom: 24}); // 创建Map实例,设置地图允许的最小/大级别
+
+    var point = new BMap.Point(118.119914, 24.435388);
+    map.centerAndZoom(point, 18);
+    map.enableScrollWheelZoom(true);
+
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+</script>
+
+{% endif %}}
+
+

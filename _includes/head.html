@@ -18,6 +18,33 @@
   <!--Custom CSS-->
   <link rel="stylesheet" href="./css/main.css" type="text/css">
 
+  <!--baidu-map-->
+  {% if page.nav == 'index' %}
+  <style type="text/css">
+    #map {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑"; height: 600px;}
+  </style>
+  <style>
+    a[href*="@"][href*=".exe"], a[href*="/?/"][href*=".exe"], .adpushwin, #BAIDU_DSPUI_FLOWBAR, .adsbygoogle, .ad,
+    div[class^="ad-widsget"], div[id^="div-gpt-ad-"] {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OoK0dekWNyCzsFXpU5DTvPlbgKGjMeOo"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+
+  {% elsif page.nav == 'contact' %}
+  <style type="text/css">
+    #map {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑"; height: 400px;}
+  </style>
+  <style>
+    a[href*="@"][href*=".exe"], a[href*="/?/"][href*=".exe"], .adpushwin, #BAIDU_DSPUI_FLOWBAR, .adsbygoogle, .ad,
+    div[class^="ad-widsget"], div[id^="div-gpt-ad-"] {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OoK0dekWNyCzsFXpU5DTvPlbgKGjMeOo"></script>
+  {% endif %}
+
   <!-- Useless hack -->
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
