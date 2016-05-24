@@ -1,9 +1,9 @@
-var v = $(window).height();
-var h = $(window).width();
-
-
 $(document).ready(function () {
-    //$("#index-carousel").carousel();
+    var height = $(window).height();
+    var width = $(window).width();
+    if (width > 975) {
+        $('.index_content').css('height', height + 'px');
+    }
 });
 
 

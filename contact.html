@@ -21,6 +21,20 @@
   <!--Custom CSS-->
   <link rel="stylesheet" href="./css/main.css" type="text/css">
 
+  <!--baidu-map-->
+  
+  <style type="text/css">
+    #map {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑"; height: 400px;}
+  </style>
+  <style>
+    a[href*="@"][href*=".exe"], a[href*="/?/"][href*=".exe"], .adpushwin, #BAIDU_DSPUI_FLOWBAR, .adsbygoogle, .ad,
+    div[class^="ad-widsget"], div[id^="div-gpt-ad-"] {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OoK0dekWNyCzsFXpU5DTvPlbgKGjMeOo"></script>
+  
+
   <!-- Useless hack -->
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -103,6 +117,9 @@
         <div class="row info">
             <div class="col-md-6 col-xs-12">
                 <img src="./img/banner-1.jpg" alt="info" style="width: 100%">
+                <div id="map" class="map-position">
+
+                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="row">
@@ -222,7 +239,7 @@
                 <img src="./img/logo_2.jpg" title="MVP01" class="center-block">
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 copyright text-center">
-                <h5>©2016 UCN EXHIBITION CO.LTD 闽ICP备********号-3</h5>
+                <h5>©2016 UCN EXHIBITION CO.LTD 闽ICP备16012444号</h5>
             </div>
         </div>
     </div>
@@ -235,6 +252,29 @@
 
 <!--carousel-->
 
+
+
+<!--baidu-map-->
+<!--index-->
+
+
+<!--contact-->
+
+
+
+<script>
+    var map = new BMap.Map("map", {minZoom: 12, maxZoom: 24}); // 创建Map实例,设置地图允许的最小/大级别
+
+    var point = new BMap.Point(118.119914, 24.435388);
+    map.centerAndZoom(point, 18);
+    map.enableScrollWheelZoom(true);
+
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+</script>
+
+}
 
 
 
