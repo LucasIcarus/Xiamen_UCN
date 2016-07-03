@@ -41,7 +41,7 @@ gulp.task('css-pre', ['sass'], function () {
 gulp.task('css', ['sass', 'css-pre']);
 
 gulp.task('img', function () {
-    return gulp.src('./_img/**.*')
+    return gulp.src('./_img/**/**.*')
         .pipe(imagemin({
             progressive: true,
             use: [pngquant()]
